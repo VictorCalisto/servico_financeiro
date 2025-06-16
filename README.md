@@ -70,7 +70,7 @@ Uso acadêmico — livre distribuição e modificação para fins educacionais.
 ## Clonando o projeto
 
 ```bash
-git clone https://github.com/VictorCalisto/slots.git
+git clone https://github.com/VictorCalisto/servico_financeiro.git
 cd slots
 ```
 
@@ -106,9 +106,10 @@ docker compose down
 │   ├── ProjetoEngenharia.class
 │   ├── ServicoProfissional.class
 │   └── SimulavelFinanceiramente.class
+├── Atividade.txt
 ├── docker-compose.yml
 ├── dockerfile
 ├── README.md
 └── servico_financeiro_original.rb
 
-1 directory, 11 files
+1 directory, 12 files
