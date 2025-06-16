@@ -1,0 +1,70 @@
+Projeto de A.E.D. (1 ponto na N2) entregar até 23/junho
+Data de conclusão 23 de junho de 2025 às 23:59
+N2
+Instruções
+
+Problema 18: Sistema de Precificação de Serviços Profissionais com Base em Complexidade e Urgência
+
+
+Descrição Geral:
+
+
+Consultorias, escritórios de engenharia, advocacia e tecnologia enfrentam o desafio de precificar seus serviços de maneira justa, levando em conta fatores como complexidade técnica, urgência da entrega e nível do profissional envolvido. Desenvolva um sistema orientado a objetos para calcular o valor final de projetos e serviços baseando-se nesses critérios, com possibilidade de simular diferentes cenários de precificação.
+
+
+
+Descrição Técnica:
+
+
+Implemente uma classe abstrata chamada ServicoProfissional, com os atributos: descricao, horasEstimadas, complexidade (1 a 5), urgencia (1 a 5), valorHoraBase. Crie os métodos abstratos calcularPrecoFinal() e detalharComposicaoCusto().
+
+Implemente também a interface SimulavelFinanceiramente com os métodos simularAjusteUrgencia(int novaUrgencia) e simularDesconto(double percentualDesconto).
+
+As classes concretas devem ser ProjetoEngenharia, AnaliseTecnologica e ConsultoriaLegal, implementando regras específicas para cálculo de preço conforme o tipo de serviço.
+
+
+
+Cálculo e Fórmulas:
+
+
+A fórmula base para o cálculo do preço é:
+
+precoFinal = valorHoraBase * horasEstimadas * (1 + (complexidade * 0.1)) * (1 + (urgencia * 0.05))
+O método simularDesconto(double percentualDesconto) deve aplicar o desconto sobre o valor calculado.
+
+O método simularAjusteUrgencia(int novaUrgencia) recalcula o preço com a nova urgência, mantendo os demais parâmetros.
+
+
+
+Casos de Teste e Validações (Parágrafo 4):
+
+Entrada – Projeto de Engenharia:
+
+
+Valor hora: R$ 200
+
+Horas estimadas: 40
+
+Complexidade: 4
+
+Urgência: 3
+
+Cálculo:
+
+
+Fator complexidade = 1 + (4 × 0.1) = 1.4
+
+Fator urgência = 1 + (3 × 0.05) = 1.15
+
+Preço final = 200 × 40 × 1.4 × 1.15 = R$ 12.880
+
+Saída Esperada:
+
+
+calcularPrecoFinal() → 12880
+
+simularDesconto(10) → 12880 × 0.9 = R$ 11.592
+
+simularAjusteUrgencia(5) → Preço com urgência máxima recalculado
+
+detalharComposicaoCusto() → Exibe cada fator da fórmula
